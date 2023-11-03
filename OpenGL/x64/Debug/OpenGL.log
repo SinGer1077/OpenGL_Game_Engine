@@ -1,5 +1,4 @@
-﻿  Camera.cpp
-  window.cpp
+﻿  window.cpp
 F:\Programming\C++\OpenGL\OpenGL\OpenGL\window.cpp(55,11): warning C4244: =: преобразование "double" в "GLfloat", возможна потеря данных
 F:\Programming\C++\OpenGL\OpenGL\OpenGL\window.cpp(56,11): warning C4244: =: преобразование "double" в "GLfloat", возможна потеря данных
 F:\Programming\C++\OpenGL\OpenGL\OpenGL\window.cpp(60,18): warning C4244: инициализация: преобразование "double" в "GLfloat", возможна потеря данных
@@ -7,7 +6,6 @@ F:\Programming\C++\OpenGL\OpenGL\OpenGL\window.cpp(61,18): warning C4244: ини
 F:\Programming\C++\OpenGL\OpenGL\OpenGL\window.cpp(62,10): warning C4244: =: преобразование "double" в "GLfloat", возможна потеря данных
 F:\Programming\C++\OpenGL\OpenGL\OpenGL\window.cpp(63,10): warning C4244: =: преобразование "double" в "GLfloat", возможна потеря данных
 F:\Programming\C++\OpenGL\OpenGL\OpenGL\window.cpp(69,28): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
-F:\Programming\C++\OpenGL\OpenGL\OpenGL\window.cpp(215,24): warning C4244: инициализация: преобразование "double" в "GLfloat", возможна потеря данных
-F:\Programming\C++\OpenGL\OpenGL\OpenGL\window.cpp(227,21): warning C4244: инициализация: преобразование "double" в "GLfloat", возможна потеря данных
-  Создание кода...
+F:\Programming\C++\OpenGL\OpenGL\OpenGL\window.cpp(182,24): warning C4244: инициализация: преобразование "double" в "GLfloat", возможна потеря данных
+F:\Programming\C++\OpenGL\OpenGL\OpenGL\window.cpp(194,21): warning C4244: инициализация: преобразование "double" в "GLfloat", возможна потеря данных
   OpenGL.vcxproj -> F:\Programming\C++\OpenGL\OpenGL\x64\Debug\OpenGL.exe

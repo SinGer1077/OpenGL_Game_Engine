@@ -1,13 +1,23 @@
 #version 460 core
 
-in vec2 fragCoord;
+in vec3 Normal;
+in vec3 FragPos;
 out vec4 color;
 
-void main(){
-	vec2 st = fragCoord.xy + vec2(0.5, 0.5);  
-    vec3 c = vec3(smoothstep(0.4, 0.5, st.x) 
-        * 1.0-smoothstep(0.5, 0.6, st.x));
-    c += vec3(smoothstep(0.4, 0.5, st.y) 
-        * 1.0-smoothstep(0.5, 0.6, st.y));
-    color = vec4(c, 1.0);
+uniform vec3 lightPos;
+uniform vec3 objectColor;
+uniform vec3 lightColor;
+
+void main(){    
+    float ambientStrength = 0.1f;
+    vec3 ambient = ambientStrength * lightColor;
+
+    vec3 norm = normalize(Normal);
+    vec3 lightDir = normalize(lightPos - FragPos);
+    float diff = max(dot(norm, lightDir), 0.0);
+    vec3 diffuse = diff * lightColor;
+
+    vec3 result = (ambient + diffuse) * objectColor;
+
+    color = vec4(result, 1.0);
 }
