@@ -1,0 +1,5 @@
+﻿window.obj : error LNK2019: ссылка на неразрешенный внешний символ _glfwInit в функции _main.
+window.obj : error LNK2019: ссылка на неразрешенный внешний символ _glfwWindowHint в функции _main.
+F:\Programming\C++\OpenGL\Dependencies\Libs\glfw3.lib : warning LNK4272: тип компьютера библиотеки "x64" конфликтует с типом целевого компьютера "x86"
+F:\Programming\C++\OpenGL\Dependencies\Libs\glew32d.lib : warning LNK4272: тип компьютера библиотеки "x64" конфликтует с типом целевого компьютера "x86"
+F:\Programming\C++\OpenGL\OpenGL\Debug\OpenGL.exe : fatal error LNK1120: неразрешенных внешних элементов: 2
