@@ -192,7 +192,7 @@ int main()
 
 
 		GLfloat timeValue = glfwGetTime();
-		glm::vec3 lightPos(1.2f, 1.0f, -1.0f);
+		glm::vec3 lightPos(sin(timeValue), 0.0f, cos(timeValue) - 2.0f);
 		ourShader.Use();		
 
 		glm::mat4 model = glm::mat4(1.0f);
@@ -216,7 +216,7 @@ int main()
 
 		glm::vec3 objectPos(0.0f, 0.0f, -2.0f);
 		trans = glm::translate(trans, objectPos);
-
+		//trans = glm::rotate(trans, glm::radians(30.0f), glm::vec3(1.0f, 0.0f, 0.0f));
 		GLuint transformLoc = glGetUniformLocation(ourShader.Program, "transform");
 		glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(trans));
 
@@ -226,6 +226,8 @@ int main()
 		glUniform3f(lightningColorLoc, 1.0f, 1.0f, 1.0f);
 		GLuint lightningPosLoc = glGetUniformLocation(ourShader.Program, "lightPos");
 		glUniform3f(lightningPosLoc, lightPos.x, lightPos.y, lightPos.z);
+		GLuint viewPosLoc = glGetUniformLocation(ourShader.Program, "viewPos");
+		glUniform3f(viewPosLoc, camera.Position.x, camera.Position.y, camera.Position.z);
 
 		vao1.Bind();
 		glDrawArrays(GL_TRIANGLES, 0, 36);
@@ -241,7 +243,7 @@ int main()
 		projectionLoc = glGetUniformLocation(lightningProgram.Program, "projection");
 		glUniformMatrix4fv(projectionLoc, 1, GL_FALSE, glm::value_ptr(projection));
 		glm::mat4 lightTrans = glm::mat4(1.0f);
-		lightTrans = glm::translate(lightTrans, lightPos);
+		lightTrans = glm::translate(lightTrans, lightPos);		
 		lightTrans = glm::scale(lightTrans, glm::vec3(0.2f));
 
 		transformLoc = glGetUniformLocation(lightningProgram.Program, "transform");
